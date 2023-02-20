@@ -53,6 +53,7 @@ spec:
                       selfHeal: false
                       prune: true
           pruneObjectBehavior: DeleteIfCreated
+          remediationAction: enforce
 ---
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
