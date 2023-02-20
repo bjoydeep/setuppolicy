@@ -55,7 +55,7 @@ kind: PlacementRule
 metadata:
   name: all-openshift
   namespace: default
-labels:
+  labels:
     global-hub.open-cluster-management.io/local-resource: "True"  
 spec:
   clusterSelector:
