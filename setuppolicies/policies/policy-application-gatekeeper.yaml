@@ -2,6 +2,7 @@ apiVersion: policy.open-cluster-management.io/v1
 kind: Policy
 metadata:
   name: policy-gatekeeper-application
+  namespace: default
   annotations:
     policy.open-cluster-management.io/categories: CM Configuration Management
     policy.open-cluster-management.io/standards: NIST SP 800-53
@@ -55,9 +56,10 @@ spec:
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
 metadata:
-  name: policy-gatekeeper-application-placement
+  name: policy-generic-bind
+  namespace: default
 placementRef:
-  name: placement-openshift-gitops-policygenerator
+  name: placement-generic
   apiGroup: apps.open-cluster-management.io
   kind: PlacementRule
 subjects:
@@ -68,7 +70,10 @@ subjects:
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: placement-openshift-gitops-policygenerator
+  name: placement-generic
+  namespace: default
+  labels:
+    global-hub.open-cluster-management.io/local-resource: "True"    
 spec:
   clusterSelector:
     matchExpressions:
