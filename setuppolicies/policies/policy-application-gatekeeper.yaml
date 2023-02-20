@@ -64,3 +64,12 @@ subjects:
   - name: policy-gatekeeper-application
     apiGroup: policy.open-cluster-management.io
     kind: Policy
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: placement-openshift-gitops-policygenerator
+spec:
+  clusterSelector:
+    matchExpressions:
+      - {key: name, operator: In, values: ["local-cluster"]}
