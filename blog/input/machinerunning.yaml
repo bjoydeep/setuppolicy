@@ -1,4 +1,0 @@
-apiVersion: machine.openshift.io/v1beta1
-kind: Machine
-status:
-  phase: Running
