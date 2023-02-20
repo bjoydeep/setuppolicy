@@ -1,7 +1,7 @@
 apiVersion: policy.open-cluster-management.io/v1
 kind: Policy
 metadata:
-  name: policy-gatekeeper-application
+  name: policy-generic-application
   namespace: default
   annotations:
     policy.open-cluster-management.io/categories: CM Configuration Management
@@ -19,7 +19,7 @@ spec:
         apiVersion: policy.open-cluster-management.io/v1
         kind: ConfigurationPolicy
         metadata:
-          name: policy-application-gatekeeper
+          name: policy-generic-application
         spec:
           remediationAction: inform
           severity: low
@@ -34,7 +34,7 @@ spec:
                 apiVersion: argoproj.io/v1alpha1
                 kind: Application
                 metadata:
-                  name: policiesgatekeeper
+                  name: policiesapplication
                   namespace: openshift-gitops
                 spec:
                   destination:
