@@ -63,7 +63,7 @@ placementRef:
   apiGroup: apps.open-cluster-management.io
   kind: PlacementRule
 subjects:
-  - name: policy-gatekeeper-application
+  - name: policy-generic-application
     apiGroup: policy.open-cluster-management.io
     kind: Policy
 ---
