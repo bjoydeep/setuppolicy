@@ -36,7 +36,7 @@ spec:
                 kind: Application
                 metadata:
                   name: policiesapplication
-                  namespace: default
+                  namespace: openshift-gitops
                 spec:
                   destination:
                     namespace: default
